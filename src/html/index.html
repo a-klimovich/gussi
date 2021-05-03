@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('./utils/head.html')
+<body>
+  <div class="wrapper">
+    <main>
+      <div class="first-screen">
+        @@include('./header.html')
+
+        <div class="container">
+          <div class="main-image">
+            <img src="./assets/bg-logo.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="about-us">
+        <div class="container">
+          <h2 class="about-us__title"><a name="aboutUs"></a> О НАС</h2>
+
+          <div class="about-us__content">
+            <div class="first-image">
+              <span class="fire1"></span>
+              <img src="../assets/persone-photo/one.png" alt="">
+            </div>
+
+            <div class="first-text">
+              <p>
+                Tнe Gussi-это независимый авторский проект, посвященный рок-музыке.
+                Творчество группы создавалось под девизом: “Делай то, что хочешь ты!” 
+                и отражает наши взгляды на современную жизнь и тренды, привычные для общества.
+              </p>
+            </div>
+
+            <div class="then-image">
+              <img src="../assets/persone-photo/two.png" alt="">
+            </div>
+
+            <div class="then-text">
+              <p>
+                История проекта начинается со случайного знакомства Software архитетора Саши и врача-педиатра Лены на вокзале в городе Берлине.
+                Эта встреча, любовь и вера в друг друга помогли им вспомнить то, о чём они мечтали всю жизнь - о желании творить музыку. 
+              </p>
+            </div>
+
+            <div class="next-image">
+              <img src="../assets/persone-photo/three.png" alt="">
+            </div>
+
+            <div class="next-text">
+              <p>
+                Летом 2020 года, проживая в маленьком городке на западе Германии, мы начали оборудовать домашнюю студию для звукозаписи,
+                пожертвовав при этом гостиной и новой кухней.К концу осени того же года мы наконец-то дали музыке, давно игравшей в наших сердцах, свободу.
+              </p>
+            </div>
+
+            <div class="secondary-image">
+              <img src="../assets/persone-photo/four.png" alt="">
+            </div>
+
+            <div class="secondary-text">
+              <p>
+                Так появился первый сингл “Играй”, олицетворяющий то, как гитара в руках мужчины делает его всесильным,
+                а микрофон в руках девушки делает ее невесомой. В настоящий момент ведётся запись первого студийного альбома “Карантиниум” на русском языке, релиз намечен на лето 2021 года. Часть композиций  из альбома будет опубликована как синглы на немецком языке.
+              </p>
+            </div>
+          </div>
+
+          <div class="finaly">
+            <div class="finaly-image">
+              <span class="fire2"></span>
+              <span class="fire3"></span>
+              <img src="../assets/persone-photo/five.png" alt="">
+            </div>
+  
+            <div class="finaly-text">
+              <p>
+                Итак, позволим мечте играть, ведь это <br>
+                действительно круто, да и кто из нас в детстве <br>
+                не мечтал стать рок-звездой?!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="music">
+        <div class="container">
+          <h2 class="music__title"><a name="music"></a>музыка</h2>
+
+          <div class="music__social">
+            <a href="#" class="social-box"><img src="../assets/apple-music.svg" alt=""></a>
+            <a href="#" class="social-box"><img src="../assets/icon-youtube-music.svg" alt=""></a>
+            <a href="#" class="social-box"><img src="../assets/icon-soundcloud-music.svg" alt=""></a>
+            <a href="#" class="social-box"><img src="../assets/icon-spotify-music.svg" alt=""></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="video">
+        <div class="container">
+          <h2 class="video__title"><a name="video"></a>Видео</h2>
+
+          <div class="video__frame">
+            <iframe src="https://www.youtube.com/embed/b9i4JWnJLx8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts">
+        <div class="container">
+          <h2 class="contacts__title"><a name="contacts"></a>контакты</h2>
+
+          <div class="contacts__social">
+            <div class="social youtube">
+              <a href="#">
+                <img src="../assets/icon-fire-youtube.png" alt="YouTube">
+
+                <span class="social__name">YouTube</span>
+              </a>
+            </div>
+
+            <div class="social instagram">
+              <a href="#">
+                <img src="../assets/icon-fire-instagram.png" alt="Instagram">
+
+                <span class="social__name">Instagram</span>
+              </a>
+            </div>
+
+            <div class="social facebook">
+              <a href="#">
+                <img src="../assets/icon-fire-fb.png" alt="Facebook">
+
+                <span class="social__name">Facebook</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feedback">
+        <div class="container">
+          <h2 class="feedback__title">обратная связь</h2>
+
+          <div class="feedback__form">
+            <form id="userFeedback">
+              <input type="text" name="username" placeholder="Имя" id="username" required>
+              <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="E-mail" id="email" required>
+              <textarea name="message" id="message" placeholder="Сообщение" cols="30" rows="3" ></textarea>
+            </form>
+            
+            <input form="userFeedback" type="submit" placeholder="отправить" class="sand-form-btn">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    @@include('./footer.html')
+  </div>
+</body>
+  @@include('./utils/includies.html')
+</html>

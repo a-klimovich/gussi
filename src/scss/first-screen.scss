@@ -1,0 +1,27 @@
+@import 'variables';
+
+.first-screen {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100vh;
+  margin-bottom: 40px;
+
+  @media ($screen-tablet) {
+    margin-bottom: 22px;
+  }
+
+  @media ($screen-mobile) {
+    margin-bottom: 8px;
+  }
+
+  background-image: url('../assets/bg-first-page-fire.png');
+  background-size: cover;
+
+  .main-image {
+    display: flex;
+    justify-content: center;
+  }
+}

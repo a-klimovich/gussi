@@ -1,0 +1,60 @@
+@import 'variables';
+
+.feedback {
+  margin-bottom: 100px;
+  
+  &__title {
+    font-family: 'gussi-custom';
+    font-size: 80px;
+    text-align: center;
+
+    margin-bottom: 40px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+
+      max-width: 600px;
+      width: 100%;
+
+      input,
+      textarea {
+        background: transparent;
+        border: 2px solid #9E9E9E;
+        border-radius: 35px;
+        
+        margin-bottom: 35px;
+        padding: 10px 17px;
+
+        font-weight: 300;
+        color: #9E9E9E;
+
+        &::placeholder {
+          font-weight: 300;
+          color: #9E9E9E;
+        }
+      }
+    }
+
+    .sand-form-btn {
+      width: 186px;
+      height: 42px;
+
+      cursor: pointer;
+
+      color: $white;
+      background: $orange;
+      box-shadow: 3px 6px 10px #ff2e0069;
+      border-radius: 35px;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.about-us {
+  position:  relative;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-family: 'gussi-custom';
+    text-align: center;
+    font-size: 80px;
+    margin-bottom: 60px;
+  }
+
+  .first-image {
+    grid-area: image-one;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  .first-text {
+    grid-area: text-one;
+    position: relative;
+  }
+
+  .next-image {
+    grid-area: image-two;
+    position: relative;
+    justify-self: end;
+
+    top: -325%;
+    margin-bottom: -80%;
+  }
+  .next-text {
+    grid-area: text-two;
+    position: relative;
+  }
+  
+  .then-image {
+    grid-area: image-three;
+    position: relative;
+    margin-bottom: 60px;
+  }
+  .then-text{
+    grid-area: text-three;
+    position: relative;
+  }
+
+  .secondary-image {
+    grid-area: image-four;
+    position: relative;
+    justify-self: end;
+
+    top: -215%;
+    margin-bottom: -70%;
+  }
+  .secondary-text {
+    grid-area: text-four;
+    position: relative;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 4;
+    grid-template-areas: 
+      "image-one text-one"
+      "text-two image-two"
+      "image-three text-three"
+      "text-four image-four";
+  }
+
+  .finaly {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 48px;
+
+    .finaly-image {
+      margin-bottom: 26px;
+    }
+  }
+
+  .fire1, .fire2, .fire3 {
+    position: absolute;
+    display: block;
+
+    width: 870px;
+    height: 655px;
+    
+    z-index: -1;
+
+    background-image: url(../assets/bg-sparks-under.png);
+    background-repeat: no-repeat;
+  }
+
+  .fire1 {
+    transform: rotate(180deg);
+    top: 33%;
+    left: -59%;
+  }
+  .fire2 {
+    bottom: 377px;
+    right: 10px;
+  }
+  .fire3 {
+    transform: rotate(-180deg);
+    width: 609px;
+    height: 426px;
+    bottom: -34px;
+    left: 178px;
+  }
+}

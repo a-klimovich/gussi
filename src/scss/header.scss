@@ -1,0 +1,26 @@
+@import 'variables';
+
+.header {
+  width: 100%;
+  padding-top: 30px;
+
+  &__menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    list-style: none;
+
+    font-family: 'gussi-custom';
+    font-size: 25px;
+    
+    a {
+      text-decoration: none;
+      color: $white;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+}

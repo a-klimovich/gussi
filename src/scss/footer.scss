@@ -1,0 +1,52 @@
+@import "variables";
+
+.footer {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-bottom: 43px;
+
+  @media ($screen-tablet) {
+    padding-bottom: 23px;
+  }
+
+  @media ($screen-mobile) {
+    padding-bottom: 10px;
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+    margin-left: -35px;
+    margin-bottom: 100px;
+  }
+
+  &__about {
+    display: flex;
+    justify-content: space-between;
+
+    &__local,
+    &__designer,
+    &__rights-reserved {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    &__local {
+      text-align: left;
+    }
+
+    &__designer {
+      margin-right: -35px;
+      text-align: center;
+    }
+
+    &__rights-reserved {
+      text-align: right;
+    }
+  }
+}
