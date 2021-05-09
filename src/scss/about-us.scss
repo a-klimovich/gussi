@@ -1,110 +1,114 @@
+@import 'variables';
+
 .about-us {
   position:  relative;
   display: flex;
   flex-direction: column;
 
+  @media ($screen-tablet) {
+    margin-bottom: 49px;
+  }
+
   &__title {
-    font-family: 'gussi-custom';
     text-align: center;
-    font-size: 80px;
     margin-bottom: 60px;
-  }
 
-  .first-image {
-    grid-area: image-one;
-    position: relative;
-    margin-bottom: 60px;
-  }
-  .first-text {
-    grid-area: text-one;
-    position: relative;
-  }
-
-  .next-image {
-    grid-area: image-two;
-    position: relative;
-    justify-self: end;
-
-    top: -325%;
-    margin-bottom: -80%;
-  }
-  .next-text {
-    grid-area: text-two;
-    position: relative;
-  }
-  
-  .then-image {
-    grid-area: image-three;
-    position: relative;
-    margin-bottom: 60px;
-  }
-  .then-text{
-    grid-area: text-three;
-    position: relative;
-  }
-
-  .secondary-image {
-    grid-area: image-four;
-    position: relative;
-    justify-self: end;
-
-    top: -215%;
-    margin-bottom: -70%;
-  }
-  .secondary-text {
-    grid-area: text-four;
-    position: relative;
-  }
-
-  &__content {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 4;
-    grid-template-areas: 
-      "image-one text-one"
-      "text-two image-two"
-      "image-three text-three"
-      "text-four image-four";
-  }
-
-  .finaly {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 48px;
-
-    .finaly-image {
-      margin-bottom: 26px;
+    @media ($screen-tablet) {
+      margin-bottom: 22px;
+    }
+    @media ($screen-mobile) {
+      margin-bottom: 8px;
     }
   }
 
-  .fire1, .fire2, .fire3 {
-    position: absolute;
-    display: block;
+  .masonry {
+    display: flex;
+    margin-bottom: -33%;
 
-    width: 870px;
-    height: 655px;
-    
-    z-index: -1;
+    &__image {
+      width: 100%;
+    }
 
-    background-image: url(../assets/bg-sparks-under.png);
-    background-repeat: no-repeat;
+    &__text {
+      width: 100%;
+      height: fit-content;
+    }
   }
 
-  .fire1 {
-    transform: rotate(180deg);
-    top: 33%;
-    left: -59%;
+  .masonry.mb-low {
+    margin-bottom: -28%;
   }
-  .fire2 {
-    bottom: 377px;
-    right: 10px;
+
+  .masonry-right {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    margin-bottom: 60px;
+
+    &__image {
+      display: flex;
+      flex-direction: row-reverse;
+
+      width: 100%;
+    }
+
+    &__text {
+      width: 100%;
+      height: fit-content;
+      text-align: right;
+    }
   }
-  .fire3 {
-    transform: rotate(-180deg);
-    width: 609px;
-    height: 426px;
-    bottom: -34px;
-    left: 178px;
+
+  .masonry-fluid {
+    &__image {
+      margin-bottom: 26px;
+    }
+
+    &__text {
+      text-align: center;
+    }
+  }
+
+  @media ($screen-tablet) {
+    .masonry, .masonry-right {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      margin-bottom: 0;
+
+      &__image {
+        width: auto;
+      }
+
+      &__text {
+        max-width: 530px;
+        padding: 22px 0;
+        text-align: center
+      }
+
+      @media ($screen-mobile) {
+        img {
+          max-height: 285px;
+        }
+
+        &__text {
+          max-width: 230px;
+        }
+      }
+    }
+
+    .masonry-fluid {
+      margin: auto;
+      max-width: 530px;
+
+      @media ($screen-mobile) {
+        max-width: 230px;
+      }
+    }
+
+    .masonry.mb-low {
+      margin-bottom: 0;
+    }
   }
 }

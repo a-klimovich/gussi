@@ -24,4 +24,20 @@
     display: flex;
     justify-content: center;
   }
+
+  &__subtitle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    bottom: 15%;
+
+    font-size: 13px;
+
+    @media ($screen-mobile) {
+      display: flex;
+    }
+  }
 }

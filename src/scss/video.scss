@@ -1,9 +1,19 @@
+@import 'variables';
+
 .video {
   padding-bottom: 75px;
+
+  @media ($screen-tablet) {
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+
+  @media ($screen-mobile) {
+    padding-top: 0;
+    padding-bottom: 50px;
+  }
   
   &__title {
-    font-family: 'gussi-custom';
-    font-size: 80px;
     text-align: center;
 
     padding-bottom: 50px;
@@ -12,6 +22,18 @@
   &__frame {
     width: 100%;
     height: 700px;
+
+    @media ($screen-tablet) {
+      margin: auto;
+      width: 100%;
+      height: 440px;
+    }
+  
+    @media ($screen-mobile) {
+      margin: auto;
+      width: 100%;
+      height: 220px;
+    }
 
     iframe {
       width: 100%;

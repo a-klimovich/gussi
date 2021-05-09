@@ -4,11 +4,13 @@
   margin-bottom: 100px;
   
   &__title {
-    font-family: 'gussi-custom';
-    font-size: 80px;
     text-align: center;
 
     margin-bottom: 40px;
+
+    @media ($screen-tablet) {
+      margin-bottom: 52px;
+    }
   }
 
   &__form {
@@ -24,6 +26,10 @@
 
       max-width: 600px;
       width: 100%;
+
+      @media ($screen-tablet) {
+        max-width: 539px;
+      }
 
       input,
       textarea {
@@ -41,6 +47,10 @@
           font-weight: 300;
           color: #9E9E9E;
         }
+
+        @media ($screen-tablet) {
+          margin-bottom: 22px;
+        }
       }
     }
 
@@ -55,6 +65,11 @@
       box-shadow: 3px 6px 10px #ff2e0069;
       border-radius: 35px;
       border: none;
+
+      @media ($screen-tablet) {
+        width: 167px;
+        height: 38px;
+      }
     }
   }
 }

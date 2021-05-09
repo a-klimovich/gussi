@@ -1,0 +1,114 @@
+@import 'variables';
+
+.lang-and-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90%;
+
+  position: relative;
+  left: 5px;
+
+  font-size: 18px;
+
+  transition: all .7s ease-out;
+
+  a {
+    &:hover {
+      color: $orange;
+    }
+  }
+
+  .lang {
+    font-size: 12px;
+
+    @media ($screen-mobile) {
+      font-size: 10px;
+    }
+  }
+
+  &.active {
+    .lang {
+      display: none;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+    }
+  }
+  
+  .menu {
+    display: none;
+    width: 0;
+
+    @media ($screen-mobile) {
+      line-height: 9.25px;
+      font-size: 10px;
+    }
+  }
+
+  .menu-left {
+    justify-content: flex-end;
+  }
+  
+  .menu-right {
+    justify-content: flex-start;
+  }
+
+  .menu-hamburger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+
+    width: 20px;
+    height: 12px;
+
+    cursor: pointer;
+    
+    @media ($screen-mobile) {
+      visibility: visible;
+      margin: 0 15px 0 10px;
+    }
+
+    .dash {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background: $white;
+
+      &.dash-top {
+        top: 0;
+        transition: .4s ease-in-out;
+      }
+
+      &.dash-bottom {
+        bottom: 0;
+        transition: .4s ease-in-out;
+      }
+    }
+
+    &.active {
+      width: 50px;
+
+      .dash-top {
+        top: 5px;
+        transform: rotate(40deg);
+      }
+
+      .dash-middle {
+        display: none;
+      }
+
+      .dash-bottom {
+        bottom: 5px;
+        transform: rotate(-40deg);
+      }
+    }
+  }
+}

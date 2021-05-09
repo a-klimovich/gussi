@@ -3,6 +3,7 @@
 .header {
   width: 100%;
   padding-top: 30px;
+  margin-bottom: 15px;
 
   &__menu {
     display: flex;
@@ -21,6 +22,28 @@
       &:hover {
         color: $orange;
       }
+    }
+  }
+
+  @media ($screen-tablet) {
+    &__menu {
+      font-size: 19px;
+    }
+
+    &__logo {
+      width: 185px;
+    }
+  }
+
+  @media ($screen-mobile) {
+    &__menu {
+      .link {
+        display: none;
+      }
+    }
+
+    &__logo {
+      width: 91px;
     }
   }
 }

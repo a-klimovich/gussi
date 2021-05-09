@@ -20,8 +20,16 @@
   &__logo {
     display: flex;
     justify-content: center;
-    margin-left: -35px;
+    position: relative;
+    left: -35px;
+    margin: auto;
     margin-bottom: 100px;
+
+    @media ($screen-tablet) {
+      left: -20px;
+      max-width: 197px;
+      max-height: 46px;
+    }
   }
 
   &__about {

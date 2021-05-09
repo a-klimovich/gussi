@@ -10,23 +10,6 @@
   box-sizing: border-box;
 }
 
-input,
-button,
-textarea,
-select {
-  font: inherit;
-  outline: none;
-}
-
-button {
-  border: none;
-}
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
 html, body {
   height: 100%;
 }
@@ -45,8 +28,46 @@ footer {
   flex: 0 0 auto;
 }
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
 h1, h2, h3, h4, h5 {
   line-height: 74px;
+}
+
+h2, .h2 {
+  font-family: 'gussi-custom';
+  font-size: 80px;
+
+  @media ($screen-tablet) {
+    font-size: 36px;
+    line-height: 33.3px;
+  }
+
+  @media ($screen-mobile) {
+    font-size: 24px;
+    line-height: 22.2px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: none;
 }
 
 .wrapper {
@@ -55,6 +76,7 @@ h1, h2, h3, h4, h5 {
 	min-height: 100%;
 
   font-size: 20px;
+  letter-spacing: 2.2px;
   color: $white;
 
   background-image: url(../assets/bg-sparks-under.png);
@@ -62,7 +84,7 @@ h1, h2, h3, h4, h5 {
   background-position-x: -19px;
   background-position-y: bottom;
   background-size: 777px 543px;
-
+  
   @media ($screen-tablet) {
     font-size: 18px;
   }
