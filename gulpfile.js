@@ -70,6 +70,16 @@ function fonts() {
   return src(srcDirectory + 'fonts/**/*')
     .pipe( dest(buildDirectory + 'fonts/') )
 }
+
+function php() {
+  return src(srcDirectory + '*.php')
+    .pipe( dest(buildDirectory + '/') )
+}
+
+function htaccess() {
+  return src(srcDirectory + '.htaccess')
+    .pipe( dest(buildDirectory + '/') )
+}
 /** -//- */
 
 function watchTask(){
@@ -87,14 +97,8 @@ function connectTask() {
   })
 }
 
-const build = parallel(html, styles, scripts, images, assets, fonts)
+const build = parallel(html, styles, scripts, images, assets, fonts, php, htaccess)
 
-exports.html = html;
-exports.styles = styles;
-exports.scripts = scripts;
-exports.assets = assets;
-exports.fonts = fonts;
-exports.images = images;
 exports.build = build;
 
 exports.default = series(
