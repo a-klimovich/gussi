@@ -6,7 +6,7 @@
   $name = $_POST['name'];
   $email = $_POST['email'];
   $postmessage = $_POST['message'];
-  $to = "test@email.com"; // TODO: change to real email
+  $to = "Alex.bluesman.smirnov@gmail.com"; // addres to sand
   $subject = "Gussi website";
 
   // Email Template

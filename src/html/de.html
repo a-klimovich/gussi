@@ -3,36 +3,63 @@
   @@include('./utils/head.html')
 <body>
   <div class="wrapper">
-    <main>
-      <div class="first-screen">
-        @@include('./header.html')
+    <div class="first-screen">
+      @@include('./header.html', {
+        aboutUs: 'über uns',
+        music: 'Musik',
+        video: 'Video',
+        contacts: 'Kontakte'
+      })
 
-        @@include('./lang-and-menu.html')
+      <div class="container">
+        <div class="main-image">
+          <img src="./assets/bg-logo.png" alt="">
+        </div>
 
-        <div class="container">
-          <div class="main-image">
-            <img src="./assets/bg-logo.png" alt="">
-          </div>
+        <div class="first-screen__subtitle">
+          <span>The Gussi-musik</span>
 
-          <div class="first-screen__subtitle">
-            <span>Tнe Gussi-музыка</span>
+          <span>freiheit und </span>
 
-            <span>свободы и</span>
-
-            <span>любви!</span>
-          </div>
+          <span>liebe!</span>
         </div>
       </div>
+    </div>
+    
+    <main>
+      @@include('./about-us.html', {
+        title: 'über uns',
 
-      @@include('./about-us.html')
+        textOne: 'The Gussi ist ein unabhängiges Rockmusikprojekt. <br><br> Die Kreativität der Gruppe entstand unter dem Motto "Mach was du willst. Sei wer du bist!" und spiegelt unsere Ansichten über das moderne Leben und die von  der Gesellschaft "vertrauten Trends" wider.',
 
-      @@include('./music.html')
+        textTwo: 'Die Geschichte des Projekts beginnt mit einem zufälligen Treffen zwischen dem Softwarearchitekten Alexander  und der Kinderärztin Elena am Berlin Ostbahnhof. Dieses Zusammentreffen und gemeinsame Gespräche  zeigten  uns, sich daran zu erinnern, woran wir ein  Leben lang geträumt hatten - Musik zu machen. Das war die Liebe.',
 
-      @@include('./video.html')
+        textThree: 'Im Sommer 2020, als wir in einer kleinen Stadt in Westdeutschland lebten, opfert wir ein Wohnzimmer und eine neue Küche, um ein Heimaufnahmestudios zu bekommen. <br><br> Ende Herbst desselben Jahres haben wir der Musik, die seit langem in unseren Herzen wohnt  endlich aufgenommen und endlich Freiheit gegeben. ',
+
+        textFour: 'So erschien die erste Single "Befrei", die Sie verkörpert, wie eine Gitarre in den Händen eine Frau  ihn allmächtig macht und ein Mikrofon in den Händen eines Mädchens sie "schwerelos" macht.<br><br> Momentan wird das erste Studioalbum "Quarantinium" in russischer Sprache aufgenommen, die Veröffentlichung ist für den Sommer 2021 geplant. <br>Einige der Songs des Albums werden als Singles in deutscher Sprache veröffentlicht.',
+
+        textFive: 'Lassen wir also den Traum wahr werden, denn er ist wirklich cool, <br> und wer von uns hat nicht davon  geträumt,  in seiner Kindheit, <br> ein Rockstar zu werden?',
+      })
+
+      @@include('./music.html', {
+        title: 'Musik',
+      })
+
+      @@include('./video.html', {
+        title: 'Video',
+      })
       
-      @@include('./contacts.html')
+      @@include('./contacts.html', {
+        title: 'Kontakte',
+      })
       
-      @@include('./feedback.html')
+      @@include('./feedback.html', {
+        title: 'Rückkopplung',
+        name: 'Name',
+        eMail: 'E-mail',
+        message: 'Botschaft',
+        sand: 'senden'
+      })
     </main>
     
     @@include('./footer.html')

@@ -3,36 +3,62 @@
   @@include('./utils/head.html')
 <body>
   <div class="wrapper">
-    <main>
-      <div class="first-screen">
-        @@include('./header.html')
+    <div class="first-screen">
+      @@include('./header.html', {
+        aboutUs: 'о нас',
+        music: 'музыка',
+        video: 'видео',
+        contacts: 'контакты'
+      })
 
-        @@include('./lang-and-menu.html')
+      <div class="container">
+        <div class="main-image">
+          <img src="./assets/bg-logo.png" alt="">
+        </div>
 
-        <div class="container">
-          <div class="main-image">
-            <img src="./assets/bg-logo.png" alt="">
-          </div>
+        <div class="first-screen__subtitle">
+          <span>Tнe Gussi-музыка</span>
 
-          <div class="first-screen__subtitle">
-            <span>Tнe Gussi-музыка</span>
+          <span>свободы и</span>
 
-            <span>свободы и</span>
-
-            <span>любви!</span>
-          </div>
+          <span>любви!</span>
         </div>
       </div>
+    </div>
 
-      @@include('./about-us.html')
+    <main>
+      @@include('./about-us.html', {
+        title: 'О НАС',
+        textOne: 'Tнe Gussi-это независимый авторский проект, посвященный рок-музыке. <br><br> Творчество группы создавалось под девизом: “Делай то, что хочешь ты!”  и отражает наши взгляды на современную жизнь и тренды, привычные для общества.',
 
-      @@include('./music.html')
+        textTwo: 'История проекта начинается со случайного знакомства Software архитетора Саши и врача-педиатра Лены на вокзале в городе <br> Берлине. <br> Эта встреча, любовь и вера в друг друга помогли им вспомнить то, о чём они мечтали всю жизнь - о желании творить музыку.',
 
-      @@include('./video.html')
+        textThree: 'Летом 2020 года, проживая в маленьком городке на западе Германии, мы начали оборудовать домашнюю студию для звукозаписи, пожертвовав при этом гостиной и новой кухней. <br><br> К концу осени того же года мы наконец-то дали музыке, давно игравшей в наших сердцах, свободу.',
+
+        textFour: 'Так появился первый сингл “Играй”, олицетворяющий то, как гитара в руках мужчины делает его всесильным, а микрофон в руках девушки делает ее невесомой. <br><br> В настоящий момент ведётся запись первого студийного альбома “Карантиниум” на русском языке, релиз намечен на лето 2021 года. Часть композиций  из альбома будет опубликована как синглы на немецком языке.',
+
+        textFive: 'Итак, позволим мечте играть, ведь это <br> действительно круто, да и кто из нас в детстве <br> не мечтал стать рок-звездой?!',
+      })
+
+      @@include('./music.html', {
+        title: 'музыка',
+      })
+
+      @@include('./video.html', {
+        title: 'Видео',
+      })
       
-      @@include('./contacts.html')
+      @@include('./contacts.html', {
+        title: 'контакты',
+      })
       
-      @@include('./feedback.html')
+      @@include('./feedback.html', {
+        title: 'обратная связь',
+        name: 'Имя',
+        eMail: 'E-mail',
+        message: 'Сообщение',
+        sand: 'отправить'
+      })
     </main>
     
     @@include('./footer.html')

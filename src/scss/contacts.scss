@@ -31,6 +31,20 @@
     position: relative;
     top: -25px;
 
+    &.vk {
+      .social__name {
+        padding-left: 45px;
+
+        @media ($screen-tablet) {
+          padding-left: 28px;
+        }
+    
+        @media ($screen-mobile) {
+          padding-left: 16px;
+        }
+      }
+    }
+
     @media ($screen-tablet) {
       top: -18px;
     }

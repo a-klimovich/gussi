@@ -62,7 +62,7 @@
       width: 186px;
       height: 42px;
 
-      font-size: 14px;
+      font-size: 20px;
       cursor: pointer;
 
       color: $white;
@@ -74,6 +74,11 @@
       @media ($screen-tablet) {
         width: 167px;
         height: 38px;
+      }
+
+      @media ($screen-mobile) {
+        width: 130px;
+        font-size: 14px;
       }
     }
   }
