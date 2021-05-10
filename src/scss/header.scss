@@ -11,7 +11,8 @@
     align-items: center;
 
     list-style: none;
-
+    margin-bottom: 22px;
+    
     font-family: 'gussi-custom';
     font-size: 25px;
     
@@ -36,7 +37,11 @@
   }
 
   @media ($screen-mobile) {
+    padding-top: 22px;
+
     &__menu {
+      margin-bottom: 15px;
+
       .link {
         display: none;
       }

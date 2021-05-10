@@ -79,9 +79,9 @@ a {
   letter-spacing: 2.2px;
   color: $white;
 
-  background-image: url(../assets/bg-sparks-under.png);
+  background-image: url(../assets/bg-first-page-fire.png);
   background-repeat: no-repeat;
-  background-position-x: -19px;
+  background-position-x: 0;
   background-position-y: bottom;
   background-size: 777px 543px;
   
@@ -91,6 +91,9 @@ a {
 
   @media ($screen-mobile) {
     font-size: 9px;
+
+    background-position-y: 100%;
+    background-size: 768px 540px;
   }
 }
 

@@ -22,6 +22,7 @@
   }
 
   .masonry {
+    position: relative;
     display: flex;
     margin-bottom: -33%;
 
@@ -32,6 +33,17 @@
     &__text {
       width: 100%;
       height: fit-content;
+    }
+
+    .fire1 {
+      position: absolute;
+      z-index: -1;
+      left: -30%;
+      bottom: -170px;
+
+      @media ($screen-tablet) {
+        display: none;
+      }
     }
   }
 
@@ -60,12 +72,25 @@
   }
 
   .masonry-fluid {
+    position: relative;
+
     &__image {
       margin-bottom: 26px;
     }
 
     &__text {
       text-align: center;
+    }
+
+    .fire3 {
+      position: absolute;
+      z-index: -1;
+      left: -14%;
+      bottom: -30px;
+
+      @media ($screen-tablet) {
+        display: none;
+      }
     }
   }
 

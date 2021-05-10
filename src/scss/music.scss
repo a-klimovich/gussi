@@ -64,6 +64,18 @@
         }
         margin-right: 0;
       }
+
+      &.small-box {
+        svg {
+          @media ($screen-tablet) {
+            max-width: 77px;
+          }
+  
+          @media ($screen-mobile) {
+            max-width: 43px;
+          }
+        }
+      }
     }
 
     @media ($screen-tablet) {
