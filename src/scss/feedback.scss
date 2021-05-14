@@ -70,6 +70,7 @@
       box-shadow: 3px 6px 10px #ff2e0069;
       border-radius: 35px;
       border: none;
+      -webkit-appearance: none;
 
       @media ($screen-tablet) {
         width: 167px;
