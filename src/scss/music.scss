@@ -7,6 +7,10 @@
   height: 509px;
   padding-top: 80px;
 
+  @media (min-width: 1400px) {
+    margin-bottom: 1%;
+  }
+
   @media ($screen-tablet) {
     height: 206px;
     padding-top: 16px;
