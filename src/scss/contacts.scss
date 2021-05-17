@@ -48,10 +48,12 @@
 
     @media ($screen-tablet) {
       top: -18px;
+      margin-left: 25px;
     }
 
     @media ($screen-mobile) {
       top: -7px;
+      margin-left: 25px;
     }
 
     a {
