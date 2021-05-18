@@ -1,15 +1,33 @@
 (function() {
-  /**
-   * lang mobile menu
-   */
+  //  GET Window height on load
+  const firstScreen = document.querySelector("body > div > .first-screen");
+  let windowHeight = window.innerHeight;
+  
+  document.documentElement.clientHeight;
+  document.body.clientHeight;
+
+  firstScreen.style.height = windowHeight + 'px';
+
+  //Header scroll
+  const $header = $(".header");
+  const scroll = 0;
+  const active = "active";
+  
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > scroll) {
+      $header.addClass(active);
+    } else {
+      $header.removeClass(active);
+    }
+  });
+
+  // localization menu on/off
   $('#hamburger').on('click', () => {
     $('.menu-hamburger').toggleClass('active')
     $('#hamburgerAndLang').toggleClass('active')
-  })
+  });
 
-  /**
-   * feedback form submit
-   */
+  // Submit from
   const $form = $('#userFeedback');
 
   $form.on('submit', function(e) {
@@ -29,9 +47,5 @@
         $form.trigger('reset');
       }
     })
-  })
-
-  /**
-   * localization
-   */
+  });
 })()

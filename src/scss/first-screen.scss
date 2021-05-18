@@ -9,6 +9,10 @@
   position: relative;
   margin-bottom: 40px;
 
+  @media (min-width: 1240px) {
+    height: auto;
+  }
+
   @media ($screen-tablet) {
     margin-bottom: 22px;
   }
@@ -24,8 +28,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    margin-top: -13%;
   }
 
   &__subtitle {

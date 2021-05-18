@@ -1,10 +1,17 @@
 @import 'variables';
 
 .header {
+  position: fixed;
   width: 100%;
-  padding-top: 30px;
-  margin-bottom: 15px;
+  padding-top: 35px;
+  padding-bottom: 13px;
   z-index: 9;
+  
+
+  &.active {
+    transition: all 1s;
+    background: $body-bg;
+  }
 
   &__menu {
     display: flex;
@@ -42,10 +49,11 @@
   }
 
   @media ($screen-mobile) {
-    padding-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
     &__menu {
-      margin-bottom: 15px;
+      margin-bottom: 10px;
 
       .link {
         display: none;
